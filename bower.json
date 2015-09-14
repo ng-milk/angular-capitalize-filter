@@ -1,0 +1,25 @@
+{
+  "name": "angular-capitalize-filter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ng-milk/angular-capitalize-filter",
+  "authors": [
+    "Dan Mindru <mindrudan@gmail.com>"
+  ],
+  "description": "Angular filter that capitalizes each word in a string, read about it on https://ngmilk.rocks/2015/04/03/angularjs-filter-that-capitalizes-each-word-in-a-string/.",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "filter",
+    "capitalize",
+    "word"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
+}

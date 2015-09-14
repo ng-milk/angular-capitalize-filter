@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular capitalize filter demo</title>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+  <body class="container-fluid" ng-app="app">
+    <h2>{{'Capitalize ALL the things!' | capitalize}}</h2>
+
+    <ul>
+      <li>MOUNTAIN -> {{'MOUNTAIN' | capitalize}}</li> <!-- Mountain -->
+      <li>MOUNTAIN DOOM -> {{'MOUNTAIN DOOM' | capitalize}}</li> <!-- Mountain Doom -->
+    </ul>
+
+    <!-- Local JS -->
+    <script src="dist/ng-capitalize.js"></script>
+    <script>
+      angular.module('app', ['dm.capitalize']);
+    </script>
+  </body>
+</html>
