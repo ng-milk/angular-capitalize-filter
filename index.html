@@ -7,19 +7,86 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-</head>
-  <body class="container-fluid" ng-app="app">
-    <h2>{{'Capitalize ALL the things!' | capitalize}}</h2>
+  <style>
+    body{
+      padding:60px 30px;
 
-    <ul>
-      <li>MOUNTAIN -> {{'MOUNTAIN' | capitalize}}</li> <!-- Mountain -->
-      <li>MOUNTAIN DOOM -> {{'MOUNTAIN DOOM' | capitalize}}</li> <!-- Mountain Doom -->
-    </ul>
+      /* So much gradient, check out -> http://uigradients.com */
+      background: -webkit-linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* Chrome 10+, Saf5.1+ */
+      background:    -moz-linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* FF3.6+ */
+      background:     -ms-linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* IE10 */
+      background:      -o-linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* Opera 11.10+ */
+      background:         linear-gradient(90deg, #ECE9E6 10%, #FFFFFF 90%); /* W3C */
+    }
+
+    h1, h2{
+      font-weight: 300;
+      margin-bottom:30px;
+    }
+
+    h2{
+      font-size:1.3em;
+    }
+
+    .jumbotron{
+      border: 1px solid whitesmoke;
+      background-color: rgba(255, 255, 255, 0.30);
+    }
+
+    .jumbotron h1{
+      font-size:3em;
+      margin-bottom:0px;
+    }
+
+    .jumbotron h2{
+      margin-top:30px;
+      margin-bottom: 10px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    footer{
+      margin-top:30px;
+      padding-top: 15px;
+      border-top: 1px solid #E6E6E6;
+    }
+  </style>
+</head>
+  <body class="container-fluid" ng-app="app" ng-controller="ctrl">
+    <section class="jumbotron">
+      <h1>Angular capitalize filter demo</h1>
+
+      <h2>Take it for a spin</h2>
+      <section class="form-group">
+        <input type="text" class="form-control" ng-model="demo">
+      </section>
+      <section class="alert alert-info" ng-class="{'alert-warning': !demo}">
+        <span ng-if="demo">Result: <b>{{demo | capitalize}}</b></span>
+        <span ng-if="!demo">Type something in the box to see it in action!</span>
+      </section>
+
+      <h2>Useful examples</h2>
+      <ul>
+        <li><b>MOUNTAIN</b> -> {{'MOUNTAIN' | capitalize}}</li> <!-- Mountain -->
+        <li><b>MOUNTAIN DOOM</b> -> {{'MOUNTAIN DOOM' | capitalize}}</li> <!-- Mountain Doom -->
+        <li><b>Capitalize ALL the things!</b> -> {{'Capitalize ALL the things!' | capitalize}}</li> <!-- Capitalize All The Things! -->
+      </ul>
+
+      <footer>
+        <a class="btn btn-primary" href="https://github.com/ng-milk/angular-capitalize-filter"><i class="fa fa-code-fork"></i> Fork on Github</a>
+        <a class="btn btn-default" href="https://github.com/ng-milk/angular-capitalize-filter/issues"><i class="fa fa-bug"></i> Submit an issue</a>
+      </footer>
+    </section>
 
     <!-- Local JS -->
     <script src="dist/ng-capitalize.js"></script>
     <script>
-      angular.module('app', ['dm.capitalize']);
+      angular.module('app', ['dm.capitalize'])
+             .controller('ctrl', ['$scope', function($scope){
+               $scope.demo = 'TRY ME OUT';
+             }]);
     </script>
   </body>
 </html>
