@@ -1,5 +1,5 @@
 {
-  "name": "angular-capitalize-filter",
+  "name": "ng-capitalize-filter",
   "version": "0.0.2",
   "description": "Angular filter that capitalizes each word in a string, read about it on https://ngmilk.rocks/2015/04/03/angularjs-filter-that-capitalizes-each-word-in-a-string/.",
   "main": "src/index.js",

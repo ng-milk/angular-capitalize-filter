@@ -17,6 +17,13 @@ Installable via `bower`:
 bower install ng-capitalize
 ```
 
+## Npm
+Installable via `npm`:
+
+```bash
+npm install ng-capitalize-filter --save
+```
+
 ## Example
 See [index.html](https://github.com/ng-milk/angular-capitalize-filter/blob/master/index.html) for an example.
 
